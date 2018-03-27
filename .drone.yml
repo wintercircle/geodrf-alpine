@@ -3,13 +3,6 @@ pipeline:
     image: plugins/docker
     secrets: [ docker_username, docker_password ]
     repo: wintercircle/geodrf-alpine
-    tag: ${DRONE_TAG}
-    when:
-      event: tag
-  docker:
-    image: plugins/docker
-    secrets: [ docker_username, docker_password ]
-    repo: wintercircle/geodrf-alpine
     tag: latest
     when:
       branch: master
