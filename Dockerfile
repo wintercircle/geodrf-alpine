@@ -8,8 +8,8 @@ RUN apk update && \
      bash \
      binutils \
      gcc \
-     gdal=2.2.4 \
-     gdal-dev=2.2.4 \
+     gdal \
+     gdal-dev \
      geos \
      geos-dev \
      git \
