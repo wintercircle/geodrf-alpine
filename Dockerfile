@@ -9,7 +9,9 @@ RUN apk update && \
      binutils \
      gcc \
      gdal \
+     gdal-dev \
      geos \
+     geos-dev \
      git \
      jpeg-dev \
      libffi-dev \
@@ -23,6 +25,4 @@ RUN apk update && \
      postgresql-dev \
      zlib-dev && \
     rm -rf /var/cache/apk/*
-RUN ln -s /usr/lib/libgeos_c.so.1 /usr/local/lib/libgeos_c.so
-RUN ln -s /usr/lib/libgdal.so.20.3.2 /usr/lib/libgdal.so
 RUN pip install --upgrade pip
