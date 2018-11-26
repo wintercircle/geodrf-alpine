@@ -3,8 +3,9 @@ FROM python:alpine
 ENV CFLAGS="$CFLAGS -L/lib"
 ENV PYTHONUNBUFFERED 0
 RUN apk update && \
-    apk upgrade && \
-    apk add --update --no-cache --repository https://uk.alpinelinux.org/alpine/edge/testing/ \
+apk upgrade && \
+apk add --update --no-cache --repository https://uk.alpinelinux.org/alpine/edge/main/ libcrypto1.1 && \
+apk add --update --no-cache --repository https://uk.alpinelinux.org/alpine/edge/testing/ \
      bash \
      binutils \
      gcc \
