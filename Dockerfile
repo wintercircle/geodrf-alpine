@@ -1,5 +1,6 @@
 # This image provides containers that can connect to a postGIS database instance.
 FROM python:alpine
+RUN pip install --upgrade pip
 ENV CFLAGS="$CFLAGS -L/lib"
 ENV PYTHONUNBUFFERED 0
 RUN apk update && \
@@ -26,4 +27,3 @@ apk add --update --no-cache \
      jpeg-dev \
      libffi-dev \
      zlib-dev
-RUN pip install --upgrade pip
