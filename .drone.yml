@@ -6,3 +6,11 @@ pipeline:
     tag: latest
     when:
       branch: master
+  docker:
+    image: plugins/docker
+    secrets: [ docker_username, docker_password ]
+    repo: wintercircle/geodrf-alpine
+    tag: ${DRONE_COMMIT_SHA:0:6}
+    when:
+      branch:
+        exclude: master
