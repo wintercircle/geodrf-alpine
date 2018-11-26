@@ -23,6 +23,5 @@ RUN apk update && \
      postgresql \
      postgresql-client \
      postgresql-dev \
-     zlib-dev && \
-    rm -rf /var/cache/apk/*
+     zlib-dev
 RUN pip install --upgrade pip
