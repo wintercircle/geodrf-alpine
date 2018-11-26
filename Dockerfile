@@ -6,23 +6,24 @@ RUN apk update && \
 apk upgrade && \
 apk add --update --no-cache --repository https://uk.alpinelinux.org/alpine/edge/main/ libcrypto1.1 && \
 apk add --update --no-cache --repository https://uk.alpinelinux.org/alpine/edge/testing/ \
-     bash \
-     binutils \
-     gcc \
      gdal \
      gdal-dev \
      geos \
      geos-dev \
+     proj4-dev && \
+apk add --update --no-cache \
+     bash \
+     binutils \
+     gcc \
      git \
-     jpeg-dev \
-     libffi-dev \
      libpq \
      linux-headers \
      mailcap \
      musl-dev \
-     proj4-dev \
      postgresql \
      postgresql-client \
      postgresql-dev \
+     jpeg-dev \
+     libffi-dev \
      zlib-dev
 RUN pip install --upgrade pip
