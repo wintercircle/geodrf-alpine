@@ -35,3 +35,4 @@ RUN apk add --virtual .image-deps --update --no-cache \
 RUN apk --update --no-cache add --virtual .xml-deps libxml2-dev libxslt-dev && pip install lxml && apk del .xml-deps
 RUN apk --update --no-cache add --virtual .uwsgi-deps pcre-dev && pip install uwsgi && apk del .uwsgi-deps
 RUN apk --update --no-cache add --virtual .magic-deps libmagic mailcap file-dev curl-dev
+RUN pip install flake8==3.4.1 safety
